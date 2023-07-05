@@ -6,10 +6,6 @@ module typs
     Null
 end
 
-n_vertiports=2
-n_eVTOL=4
-eVTOL_speed=165
-
 mutable struct Ambulance #Create the ambulance structure
     index::Int64
     region::Int64
@@ -40,6 +36,17 @@ mutable struct Request2 # Create Request structure
     finishedService::Float64
 end
 
-export Ambulance, AmbStatus, Idle, Bussy, Null, Request2
+mutable struct eVTOL #Create the ambulance structure
+    index::Int64
+    region::Int64
+    station::Int64
+    status::AmbStatus
+    returnBase::Float64
+    latitude::Float64
+    longitude::Float64
+    auxdisthav::Float64
+end
+
+export Ambulance, AmbStatus, Idle, Bussy, Null, Request2, eVTOL
 
 end
