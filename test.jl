@@ -48,9 +48,10 @@ freq_horaria_acc=[0.027,  0.049,  0.074,  0.096,  0.117,  0.1365,
              0.539,  0.59,  0.638,  0.691,  0.743,  0.797,  0.842,  0.892,  0.932,  0.97,  1]
 
 
-
-
-
+using Distributions
+for i in 1:5
+    println(rand(Bernoulli(0.5)))
+end
              
 #objetivo es seleccionar las requisiciones aleatoriamente con base en región, semana y hora
 

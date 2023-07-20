@@ -6,6 +6,7 @@ using .typs
 using CSV
 using DataFrames
 using DelimitedFiles
+using Distributions
 
 
 ReqFileName="test_1_req.csv"
@@ -24,10 +25,10 @@ function readReqData2(ReqFileName)
                             dfrequests[i,:longitude],
                             travtimesfrombases1[i],
                             dfrequests[i,:travttonearesth],
-                            60.0,
+                            rand(45.9:51.6),
                             travelTimeseReturnBase1[i],
                             dfrequests[i,:priority],
-                            dfrequests[i,:reqhospit],
+                            rand(Bernoulli(0.5)),
                             dfrequests[i,:inhardtoreachzone],
                             false,0.0,0.0,0.0,0,0.0)
     end

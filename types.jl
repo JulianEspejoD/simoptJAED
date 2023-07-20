@@ -40,6 +40,7 @@ mutable struct eVTOL #Create the ambulance structure
     index::Int64
     region::Int64
     station::Int64
+    relative_pos::Int64
     status::AmbStatus
     returnBase::Float64
     latitude::Float64
